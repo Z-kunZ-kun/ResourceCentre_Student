@@ -172,15 +172,21 @@ public class ResourceCentre {
 		
 	}
 	
-	public static Chromebook inputChromebook() {	
-		Chromebook cb =null;
+	public static Chromebook inputChromebook() {
 		// write your code here
+		String tag = Helper.readString("Enter asset tag > ");
+		String description = Helper.readString("Enter description > ");
+		String os = Helper.readString("Enter operating system > ");
 
-		return cb;
+		Chromebook cb1 = new Chromebook(tag, description, os);
+
+		return cb1;
 		
 	}	
-	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
+	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb1) {
 		// write your code here
+		chromebookList.add(cb1);
+		System.out.println("Chromebook added");
 	}
 	
 	//================================= Option 3 Loan an item (CRUD - Update) =================================
